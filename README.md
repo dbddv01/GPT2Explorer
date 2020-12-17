@@ -5,9 +5,9 @@ GPT2Explorer is simply a basic window graphical user interface wrapping the demo
 Excutable has been built via pyinstaller and Gui has been built with PySimpleGUI framework and a notepad template from Israel Dryer, wrapping the gpt2tc.exe engine.
 
 Quick Start
-After unpacking GPT2-Explorerthe folder, you must also 
-  1. add the content of https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz to the GPT2-Explorer folder.
-  2. Download the available small model https://bellard.org/nncp/gpt2tc-117M.tar.gz and place the gpt2_117M.bin file into the GPT2-Explorer folder
+  1  Unpack the GPT2-Explorer folder from to zip file on your pc, then, you must also 
+  2. Add the content of https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz to the GPT2-Explorer folder.
+  3. Download the available small model https://bellard.org/nncp/gpt2tc-117M.tar.gz and place the gpt2_117M.bin file into the GPT2-Explorer folder
 
 Then, it should run stand-alone on windows10 64bit with a decent cpu and 4Gb Ram, by clicking on GPT2-Explorer.exe .
 Load the filter named 'NoFilter.flt' and click on the <Generate button>, wait 5 seconds and read.
