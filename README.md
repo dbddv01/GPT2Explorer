@@ -7,7 +7,7 @@ Excutable has been built via pyinstaller and Gui has been built with PySimpleGUI
 
 Quick Start
   
-  1  Unpack the GPT2-Explorer folder from to zip file on your pc, then, you must also 
+  1  Unpack the GPT2-Explorer folder from the .zip file on your pc, where you want, then, you must also 
   
   2. Add the content of https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz to the GPT2-Explorer folder.
   
@@ -19,9 +19,9 @@ Load the filter named 'NoFilter.flt' and click on the <Generate button>, wait 5 
 My 2017 laptop pc delivers 32 words/s with the small model, XL model can run on a 8Gb RAM recen laptop (altough it can take minutes to deliver outputs)
 Answer time can be quite different depending on your hardware performances.
 
-See help.txt for more detailed info.
+See help.txt in this Zip file for more detailed install info and usage.
 
-Other model will have to be built separately or downloaded ( need still to figure this out).
+Other model will have to be built separately or downloaded ( need still to figure this out as it reaches 600Mb (medium), 1.6 Gb (Large), and 3Gb (XL)).
 
 Writers, curious, teachers and poets and others, have fun but use responsibly.
 This is much more for educational purpose than anything else.
