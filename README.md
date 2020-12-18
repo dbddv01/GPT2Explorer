@@ -7,7 +7,7 @@ Excutable has been built via pyinstaller and Gui has been built with PySimpleGUI
 
 Quick Start
   
-  1  Unpack the GPT2-Explorer folder from the .zip file on your pc, where you want, then, you must also 
+  1. Unpack the GPT2-Explorer folder from the .zip file on your pc, where you want, then, you must also 
   
   2. Add the content of https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz to the GPT2-Explorer folder.
   
