@@ -21,7 +21,7 @@ This model runs but slow... Answer time is up to 2 to 4 minutes under a coreI5 w
 https://drive.google.com/file/d/1HI5fyjZKP8yHQv3pLA1PiEp1wk7-QZOX/view?usp=sharing
 
 
-In case of need this is a blunt copy of original gpt2tc package.
+In case of need this is a copy of original gpt2tc package.
 
 gpt2tc from Fabrice Bellard (filename gpt2tc-2020-07-25.tar.gz)
 https://drive.google.com/file/d/1s_vn2aacI8NZI0cKbpjMQhl_MNgxsax9/view?usp=sharing
