@@ -19,9 +19,9 @@ Load the filter named 'NoFilter.flt' and click on the <Generate button>, wait 5 
 My 2017 laptop pc delivers 32 words/s with the small model, XL model can run on a 8Gb RAM recen laptop (altough it can take minutes to deliver outputs)
 Answer time can be quite different depending on your hardware performances.
 
-See help.txt in this Zip file for more detailed install info and usage.
+See help.txt with the GPT2Explorer.zip file for more detailed installations information and usage.
 
-Other model will have to be built separately or downloaded ( need still to figure this out as it reaches 600Mb (medium), 1.6 Gb (Large), and 3Gb (XL)).
+18-12-2020 - Other models ( medium, large and XL ) can be downloaded currently via links provided in the model_download.txt 
 
 Writers, curious, teachers and poets and others, have fun but use responsibly.
 This is much more for educational purpose than anything else.
