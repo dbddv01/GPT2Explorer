@@ -1,0 +1,28 @@
+Models are currently available on my Gdrive. (december 2020)
+
+These models are only working with the ecosystem gpt2tc.exe and gpt2Explorer.exe 
+They were created from original model checpoints via the gpt2convert.py utility.
+
+First, Download the small model and check if it works under your computer with a decent answer time.
+Then you might want to test bigger models.
+All models should be placed in the Gpt2Explorer directory.
+
+117M (small) filename :gpt2_117M size: 244M
+https://drive.google.com/file/d/1EV1DsW8_chPyP62vTt9WifBT7tvx3YNu/view?usp=sharing 
+
+335M (medium) filename : gpt2_334M.bin size : 679Mb
+https://drive.google.com/file/d/1m79aVEPgBQa32H1wpezuMXDtkx-2ta6C/view?usp=sharing
+
+774M (large) finename : gpt2_774M.bin size: 1.5Gb
+https://drive.google.com/file/d/1Jrd7ciw8fJb8g1vmUHrcT02jK37LAmBq/view?usp=sharing
+
+1558M (XL ) finelame : gpt2_1558M.bin size 3gb 
+This model runs but slow... Answer time is up to 2 to 4 minutes under a coreI5 with 8gb Ram)
+https://drive.google.com/file/d/1HI5fyjZKP8yHQv3pLA1PiEp1wk7-QZOX/view?usp=sharing
+
+
+In case of need this is a blunt copy of original gpt2tc package.
+
+gpt2tc from Fabrice Bellard (filename gpt2tc-2020-07-25.tar.gz)
+https://drive.google.com/file/d/1s_vn2aacI8NZI0cKbpjMQhl_MNgxsax9/view?usp=sharing
+
