@@ -27,3 +27,5 @@ Writers, curious, teachers and poets and others, have fun but use responsibly.
 This is much more for educational purpose than anything else.
 
 Don't expect much support, i'm a desesperate amateur with the machines and i have work, life etc.
+
+Note : The .exe might be seen by anti-virus software as containing trojan (especially window defender while mc affee does not report anything). This behaviour is known for .exe compiled with pyinstaller since a while. 
