@@ -21,7 +21,9 @@ Answer time can be quite different depending on your hardware performances.
 
 See help.txt with the GPT2Explorer.zip file for more detailed installations information and usage.
 
+23-12-2020 - Updated version 0.02 uploaded. Minor changes for better stability. Help text also uploaded to Github.
 18-12-2020 - Other models ( medium, large and XL ) can be downloaded currently via links provided in the model_download.txt 
+
 
 Writers, curious, teachers and poets and others, have fun but use responsibly.
 This is much more for educational purpose than anything else.
