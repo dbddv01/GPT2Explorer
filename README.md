@@ -22,7 +22,7 @@ Answer time can be quite different depending on your hardware performances.
 See help.txt with the GPT2Explorer.zip file for more detailed installations information and usage.
 
 
-24.12.2020 - Recompiled with new bootloader to lowert false-positive of heuristics anti-virus reactions.
+24.12.2020 - Recompiled with new bootloader to lower false-positive reactions of anti-virus working with heuristic rules. 
 
 23-12-2020 - Updated version 0.02 uploaded. Minor changes for better stability. 
            - NoFilter.flt set by default & Help text also uploaded to Github.
