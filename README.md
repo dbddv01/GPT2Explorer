@@ -14,14 +14,18 @@ Quick Start
   3. Download the available small model https://bellard.org/nncp/gpt2tc-117M.tar.gz and place the gpt2_117M.bin file into the GPT2-Explorer folder
 
 Then, it should run stand-alone on windows10 64bit with a decent cpu and 4Gb Ram, by clicking on GPT2-Explorer.exe .
-Load the filter named 'NoFilter.flt' and click on the <Generate button>, wait 5 seconds and read.
+
 
 My 2017 laptop pc delivers 32 words/s with the small model, XL model can run on a 8Gb RAM recen laptop (altough it can take minutes to deliver outputs)
 Answer time can be quite different depending on your hardware performances.
 
 See help.txt with the GPT2Explorer.zip file for more detailed installations information and usage.
 
-23-12-2020 - Updated version 0.02 uploaded. Minor changes for better stability. Help text also uploaded to Github.
+
+24.12.2020 - Recompiled with new bootloader to lowert false-positive of heuristics anti-virus reactions.
+23-12-2020 - Updated version 0.02 uploaded. Minor changes for better stability. 
+           - NoFilter.flt set by default & Help text also uploaded to Github.
+           
 18-12-2020 - Other models ( medium, large and XL ) can be downloaded currently via links provided in the model_download.txt 
 
 
