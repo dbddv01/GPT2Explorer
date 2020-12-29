@@ -17,7 +17,7 @@ Then, it should run stand-alone on windows10 64bit with a decent cpu and 4Gb Ram
 My 2017 laptop pc delivers 32 words/s with the small model, XL model can run on a 8Gb RAM recen laptop (altough it can take minutes to deliver outputs)
 Answer time can be quite different depending on your hardware performances.
 
-See help.txt with the GPT2Explorer.zip file for more detailed installations information and usage.
+See help.txt within this github or within the GPT2Explorer.zip file for more detailed installations information and usage.
 
 
 29.12.2020
