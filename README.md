@@ -9,9 +9,7 @@ Quick Start
   
   1. Unpack the GPT2-Explorer folder from the .zip file on your pc, where you want, then, you must also 
   
-  2. Download and Add the content of https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz to the GPT2-Explorer folder.
-  
-  3. Download the available small model https://bellard.org/nncp/gpt2tc-117M.tar.gz and place the gpt2_117M.bin file into the GPT2-Explorer folder
+  2. Download the available small model https://bellard.org/nncp/gpt2tc-117M.tar.gz and place the gpt2_117M.bin file into the GPT2-Explorer folder
 
 Then, it should run stand-alone on windows10 64bit with a decent cpu and 4Gb Ram, by clicking on GPT2-Explorer.exe .
 
@@ -21,6 +19,11 @@ Answer time can be quite different depending on your hardware performances.
 
 See help.txt with the GPT2Explorer.zip file for more detailed installations information and usage.
 
+
+29.12.2020
+           - Slicing fixed.
+           - Embryo of batch function with possibilities of processing a dataset trough filters enabled.
+	         - 3 buttons for speed access to included demos (Chatbot, Philosopher, Starwars like story) 
 
 24.12.2020 - Recompiled with new bootloader to lower false-positive reactions of anti-virus working with heuristic rules. 
 
