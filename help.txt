@@ -1,0 +1,199 @@
+
+
+**************************************
+*** GPT2-Explorer for Windows v0.3 ***
+**************************************
+*********** 29.12.2020 ***************
+*********** HELP Notes ***************
+**************************************
+Repository is to be found here
+
+https://github.com/dbddv01/GPT2Explorer
+
+This is a very basic notepad application embedded with the realeased GPT-2 OpenAI Language model using gpt2tc.exe runtime developped by Fabrice Bellard.
+
+********************
+* 1. Speed startup *
+********************
+
+A. Hardware requirement.
+-----------------------
+
+	- A decent laptop (e.g. CoreI5, 4gb RAM) can run all models besides 1558M for which 8GB RAM might be the minimum to get an answer.
+	- This .exe has been tested under Win10/64bits without issue so far. (dec. 2020)
+
+B. Software install.
+--------------------
+
+1. ** Unzip the folder ** 
+	- included in the Gpt2Explorer.zip package on a directory of your choice. 
+
+2. ** Add the gpt2tc.exe engine. **
+	- (December 2020) - Download the tool from Fabrice Bellard at https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz
+	- Unzip/Exctact all files included in the folder \gpt2tc-2020-07-25  onto your newly created folder \GPT2Explorer
+
+Here the list of the files that MUST be added to the folder \GPT2Explorer
+
+	download_model.sh
+	gpt2convert.py
+	gpt2vocab.txt
+	Changelog
+	readme.txt
+	gpt2tc
+	libwinpthread-1.dll
+	gpt2tc.exe
+
+3. ** Models **
+
+	A Model Language is the 'brain' of the app. 
+	So far, GPT2Explorer will only handle models named
+	GPT-2 small        117M         
+	GPT-2 medium       345M         
+	GPT-2 Large        774M         
+	GPT2-2 XL          1558M         
+	which here corresponds to the officials released by OpenAI along year 2019.
+	See further info at  https://openai.com/blog/gpt-2-1-5b-release/
+
+	The small model can be downloaded currently at this adress :
+	
+	https://bellard.org/nncp/gpt2tc-117M.tar.gz
+	
+	Others models can be built by following gpt2tc conversion tool following instructions mentioned in the readme.txt included in Fabrice Bellard's package. But this conversion step needs a workstation with prior installation of python and tensorflow which is currently outside the scope of this application.
+
+	[Update v0.02] Already converted models Small, medium, large and XL are currently available via my Gdrive until this methods reaches its limits. Links are available in the Github under models_download.txt 
+
+	- Models must be dowloaded separately and copied in the GPT2Explorer directory.
+	- Filenames of the models are strictly: gpt2_117M.bin, gpt2_345M.bin, gpt2_774M.bin, gpt2_1558M.bin
+	- Note : In command line, gpt2tc allows flexibility in the naming and potentially additional model to be handled but the GUI didn't at the moment. So if you succeed to get another model and to convert it, you will have to rename it under one of the model filename accepted. The Gui should run them.
+	
+4. ** Run the application. **
+
+	- Click on GPT2Explorer.exe  A window that looks like a kind of very basic notepad opens. Welcome.
+	- For very quick demo, click on one of three buttons :
+		° The Bear is a chatbot simulation
+		° The Glasses is a Philosopher writer
+		° The tie-fighter is Starwars like story generator.
+	- Otherwise, input some text, click on the 'Generate button' and design yourself the prompt.
+	- Look into the directory, open flt, dat, text files to get inspiration how easy we can design other generations (code, music scores, nlp tasks, data parsing, slogans, news articles etc.)
+
+C. Software usage.
+------------------
+
+** 1. Standard Usage : **
+
+	- Verify that you have loaded a model that is present on the directory (see here above Software install).
+	
+	- Text generation is the aim. Type some text in the app, like in a notepad and click on "Generate"
+	
+	- Wait from a couple of seconds to a couple of minutes, depending on the model and the hardware it runs onto. Text is produced and colored in blue. You can then interact by modifying what is included int the text. Next Generation takes all the text contained in the notepad window.
+	
+	- You can play with lenght of the text generated, and the top_k parameter. This influence as well the answer time for text generation.
+	
+	- As far as i know model can accept about 3000 character before going nuts or truncating a part of it. Take this number of words in consideration while prompting and generating. The tool limits its input to 8512 char anyway. After this limits, it will crash. An alert should pop-up when those limits could be reached at next generation, taking in account the lenght set and the number of character already present in your text.
+	
+	- Edit the text as you want, like in a notepad, save great creation, load old ones as prompts, etc.
+
+** 2. Extended Usage **
+
+	1. Filters : are basic text file where the keyword {YOURENTRY} appears in order for a pre-defined prompt to accept what you write in the notepad as a parameter. It's more a feature for future development ideas. (Classify.flt needs an input like this "(The action is being led by New York’s Attorney General Letitia James, and she wasn’t holding back in her declaration of legal war.)" to ideally extract the name, function, company name within this sentence. And a stopword "INPUT" might help truncating the text to the desired answer only. This will probably be further explored in future versions.
+	
+	2. Stopword: Primarily this is useful when you simulate a chatbot, where you prompt the interlocutor (e.g. >Robot: or >Human: ) whenever it appears in the text generation, enabling interactivity. It could be useful in other experiments as well. (in case you succeed to learn the model (prompting in few shots ) to respect a dedicated format of answers (like <INPUT> / <OUPUT>), adding a stopword will truncate the generation as soon as it finds the stopword. The stopword is not part printed. Further development might occur if this is found useful.
+
+	3. Force chatbot : by enabling this, the generated text will be appended the part of text provided. By default, it is set to the sequence of letter "<Bot>". But this is just an example, you can put anything that suits your case. (e.g. <Robot>, <Psychanalist>, <Eistein>, etc). In case you enable this, it is assumed that Stopword is also used in a corresponding chatbot dialogue.
+
+	4. Batch : clicking on batch will automatically generate the number of time set by the slider and write the generated text only (without the prompt) into a txt file, located at the home directory of gpt2explorer, named 'resultbatch.txt'. During this generation, the app is locked and no other actions are possible until the end of the batch task. 
+		a. Batch with filter : if a filter is loaded, batch will take it in account and use what was written in the notepad as entry for the filter. This only works using batch generation
+		b. Batch with dataset : enabling this option will use what is written in dataset.dat file as entry for the filter. This is still a fragile feature. gpt2explorer expect the dataset to be formatted with one entry per line (delimited by carriage return) and a numer of entries at least equalling the number of occurences the batching should do. (e.g. if you set the slider of batch to 10, the dataset.dat should at least contains ten lines). This only works using batch generation
+		c. Include data in output : will additionally write the initial entry in the resultbatch.txt This only works using batch generation
+
+Have fun, experiment by getting more info on the net with keywords like GPT-2, prompts, GPT-3, few and zero shot learning etc. There is plenty of different experiments that you can make. These models need much more priming and examples to generate quality contents but they can be quite efficient in different cases.
+
+
+D. Issues, limitations.
+-----------------------
+
+	There could be lot ! In no way this is a professional nor commercial approach. Gpt2tc engine is a demo that is not intended to be more than that. 
+	I am not prepared to do support. I succeed to make an zipped package with the .exe GUI.  I extracted those pack locally on two different windows laptop at home that does not have any kind of customized software, and it runs. So i believe this might work for other people.
+ 
+	For the techies, i made a GUI with help of PySimpleGUI framework, using a premade script of a notepad (see credits). This GUI is a wrapper around the great gpt2tc.exe of Fabrice Bellard, but which only works in command line (try it !). Altough it works perfectly in command line and really faster in that mode, i felt that it could be easier to have a basic windowed interface enabling a kind of easy end-user experience closer to what we see on the net (aidungeon, textotransforsmers, aiwriter, aiphilosopher and others) without the need to be bound to an internet connection and an API. This does not intent to compete with the commercial offers online which are mainly served by more prowerful models (Megatron, GPT-3, etc). 
+
+	I did not chose to perform similar task with the easy aitextgen framework because Fabrice Bellard is doing something really fast in terms of performance. Answer time is faster and smaller with gpt2tc.exe (He does a genius trick with bpe compression if i good understood). This allow to run gpt2 different models, even the XL 1.5B on a standard computer (cpu only). See his website and documentation therefore.
+
+	Depending on your hardware, versions of windows, character set and language config, this program might just crash.
+
+	!! Depending on the system, the .exe might be seen as infected by trojan by Windows Defender and Avast anti-virus. This is a known issue with .exe built with pyinstaller. Make sure you downloaded the package from the initial github.
+
+
+	A couple of txt files are mandatory for the application, don't delete them until you understand what it does : Mandatory are NoFilter.flt & temp.log necessary to prevent crash. 
+
+	Still, don't expect instant answers, the gui should load the model ( from hundreds Mb to 3Gb, depending on the model), and then process it, when the processing is done, it will eruct the text in function of lenght and topK parameter set in Gui.
+	
+	Small model can respond quite quickly, a couple of second of wait time with a kpi of 32words/sec.
+	XL runs only with at least 8Gb RAM and can take up to 120 sec to answer but the result is more stunning ! 
+
+Ethics :
+----------
+
+	This a creative tool that does not have intention, sentience or whatsoever. It reflects cultural stereotypes of the data it  has been fed during its training. So don't judge or being offended, take distance... Words eruption can sometimes just be as cruel and crude as our world is, mirrored by the dominant culture that has contributed to the model development. This is a known issue adressed worldwide in this field of research. 
+
+	This is a mainly a text generator, a creative tool, the program until further news, is depending on allowed parameter set in the initial command line tool which has currently fixed the 'temperature' parameter to 1. Besides all technical discussion, shortly said, it means that  ground truth is very unlikely to be provided. So, never, never trust what this tool might express and mentions this is an gpt produced text if you publish something. 
+	
+	Proper Nouns, text references, judgement, analysis, recipes, how-to, list of facts, question/answering and all others type of informational text will be sometimes false, even if you did not spot it at first sight. (e.g. The training of this model stopped in 2019. Do you think it knows anything about a keyword like Covid19 ? try it ! ) 
+	
+	So, be trained yourself, as human, to be critical, to verify what the model can say, and you will be surprised. It imitates, it creates a kind of parrallel universe where the nuance should be detected against our reality. In this fuzyness of langage, it creates the illusion but don't be fooled. As said, it is just a program. It does not have intentions nor understanding. 
+
+	We need movies, stories, revision, translation, interpretation, new ideas, absurdity, contradictions, poetry, theatre, music, philosophy and discussions. We human, like mysteries, intuition, curiosities, emotions and thinking. This is our pleasure and if you investigate those taxonomic levels, you might be delighted to play with such a tool. 
+
+
+
+
+Z. Note about myself.
+
+	I'm just a messenger, i have no level in coding nor nlp, ai, big data etc, 
+	I just have some generic knowledge in a kind of quick and dirty do-it-yourself approach. 
+	The aim is to ease doing experiences with those language models for which i remain quite fascinated. That's why i would like to share it in the most simple way to use.
+	This could also demistify the technology and teach the people how to detect fake from ground truth.
+	I believe this could be a fun tool for teachers, writers, and artists without the need to be connected to matrix cloud of api's that could disappear one day.
+
+
+CREDITS
+-------
+	GPT2Explorer use  'a minimalist Notepad with the PySimpleGUI TKinter framework, inspired by the code of Israel Dryer'
+
+	This GUI make full use of the PySimpleGUI framework (https://pysimplegui.readthedocs.io/)
+
+	This GUI is a basic wrapper around the fantastic gpt2tc.exe command line developed by Fabrice Bellard
+
+	You can find more information about this brilliant guru at https://bellard.org/
+
+	At the moment (december 2020) you can find the online version still running https://bellard.org/textsynth/
+
+Legal  
+-----
+
+	I am not an expert. But this GUI, current v0.03 is intended to be freely used under MIT License.
+	See my Github.
+	I did include Fabrice Bellard's tool in my package but it is unclear which is its legal status altough anyone can download 	it freely from his website. https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz
+
+
+Versions
+--------
+	GPT2Explorer v.01 - Initial release 19.12.2020
+	GPT2Explorer v.02 - 23.12.2020
+	- NoFilter.flt loaded by default (No need to preload)
+	- Wordcounts and character counts added to Main Bar to monitor prompt size limit.
+	- Better slicing between new generation and previous prompt.
+	- Fixed issue with break lines (crlf) when saving file.
+	GPT2Explorer v.03 - 29.12.2020
+	- Slicing fixed.
+	- Embryo of batch function with possibilities of processing a dataset trough filters enabled.
+	- 3 buttons for speed access to included demos (Chatbot, Philosopher, Starwars like story) 
+
+
+
+Future :
+----------
+	- Finding other suitable models (pytorch models are not an option so far).
+	- Collecting prompt examples
+	- Batching and Chaining with filters etc
+	- Asking for temperature and top p if possible on gpt2tc.exe(not in my hands)
