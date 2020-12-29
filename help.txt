@@ -1,8 +1,9 @@
 
 
 **************************************
-*** GPT2-Explorer for Windows v0.2 ***
+*** GPT2-Explorer for Windows v0.3 ***
 **************************************
+*********** 29.12.2020 ***************
 *********** HELP Notes ***************
 **************************************
 Repository is to be found here
@@ -93,6 +94,13 @@ C. Software usage.
 	
 	2. Stopword: Primarily this is useful when you simulate a chatbot, where you prompt the interlocutor (e.g. >Robot: or >Human: ) whenever it appears in the text generation, enabling interactivity. It could be useful in other experiments as well. (in case you succeed to learn the model (prompting in few shots ) to respect a dedicated format of answers (like <INPUT> / <OUPUT>), adding a stopword will truncate the generation as soon as it finds the stopword. The stopword is not part printed. Further development might occur if this is found useful.
 
+	3. Force chatbot : by enabling this, the generated text will be appended the part of text provided. By default, it is set to the sequence of letter "<Bot>". But this is just an example, you can put anything that suits your case. (e.g. <Robot>, <Psychanalist>, <Eistein>, etc). In case you enable this, it is assumed that Stopword is also used in a corresponding chatbot dialogue.
+
+	4. Batch : clicking on batch will automatically generate the number of time set by the slider and write the generated text only (without the prompt) into a txt file, located at the home directory of gpt2explorer, named 'resultbatch.txt'. During this generation, the app is locked and no other actions are possible until the end of the batch task. 
+		a. Batch with filter : if a filter is loaded, batch will take it in account and use what was written in the notepad as entry for the filter. This only works using batch generation
+		b. Batch with dataset : enabling this option will use what is written in dataset.dat file as entry for the filter. This is still a fragile feature. gpt2explorer expect the dataset to be formatted with one entry per line (delimited by carriage return) and a numer of entries at least equalling the number of occurences the batching should do. (e.g. if you set the slider of batch to 10, the dataset.dat should at least contains ten lines). This only works using batch generation
+		c. Include data in output : will additionally write the initial entry in the resultbatch.txt This only works using batch generation
+
 Have fun, experiment by getting more info on the net with keywords like GPT-2, prompts, GPT-3, few and zero shot learning etc. There is plenty of different experiments that you can make. These models need much more priming and examples to generate quality contents but they can be quite efficient in different cases.
 
 
@@ -158,9 +166,9 @@ CREDITS
 Legal  
 -----
 
-	I am not an expert. But this GUI, current v0.02 is intended to be freely used under MIT License.
+	I am not an expert. But this GUI, current v0.03 is intended to be freely used under MIT License.
 	See my Github.
-	I did not include Fabrice Bellard's tool in my package as it is unclear which is its legal status altough anyone can download it freely from his website.
+	I did include Fabrice Bellard's tool in my package but it is unclear which is its legal status altough anyone can download 	it freely from his website. https://bellard.org/nncp/gpt2tc-2020-07-25.tar.gz
 
 
 Versions
@@ -171,6 +179,10 @@ Versions
 	- Wordcounts and character counts added to Main Bar to monitor prompt size limit.
 	- Better slicing between new generation and previous prompt.
 	- Fixed issue with break lines (crlf) when saving file.
+	GPT2Explorer v.03 - 29.12.2020
+	- Slicing fixed.
+	- Embryo of batch function with possibilities of processing a dataset trough filters enabled.
+	- 3 buttons for speed access to included demos (Chatbot, Philosopher, Starwars like story) 
 
 
 
