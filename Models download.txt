@@ -18,7 +18,7 @@ https://drive.google.com/file/d/1Jrd7ciw8fJb8g1vmUHrcT02jK37LAmBq/view?usp=shari
 
 1558M (XL ) finelame : gpt2_1558M.bin size 3gb 
 This model runs but slow... Answer time is up to 2 to 4 minutes under a coreI5 with 8gb Ram)
-https://drive.google.com/file/d/1HI5fyjZKP8yHQv3pLA1PiEp1wk7-QZOX/view?usp=sharing
+https://drive.google.com/file/d/1wH6cJy78IT_c68gh3M1kuR82Pi1pG2Xl/view?usp=sharing
 
 
 In case of need this is a copy of original gpt2tc package.
